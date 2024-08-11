@@ -1,29 +1,32 @@
-import Head from "next/head";
-import Image from "next/image";
-import PhoneInput from "react-phone-input-2";
-import Form from "../src/components/Forms/Form";
-import FormField from "../src/components/Forms/FormField";
-import styles from "../styles/Home.module.css";
+"use client";
+import { useRouter } from "next/router";
+import Header from "../src/components/Header";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <div className="flex">
-      <div className="w-1/2 pl-[112px] pt-[51px]">
-        {/* <img src="/images/logo.png" className="w-[154px]" /> */}
-        <div>
-          <Form initialValues={{ mobile: "" }} onSubmit={() => ""}>
-            <FormField
-              name="mobile"
-              placeholder="Mobile number"
-              label="Mobile number"
-            />
-            <PhoneInput specialLabel={""} country="RU" />
-          </Form>
-        </div>
+    <>
+      <Header />
+
+      <div className="min-h-[553px] bg-primary flex flex-col justify-center items-center p-4 text-center">
+        <h1 className="text-4xl md:text-7xl font-bold text-white">
+          Coming Soon!
+        </h1>
+        <p className="py-4 md:py-6 text-white">
+          Our site is currently undergoing enhancements.{" "}
+          <br className="hidden md:block" />
+          Please check back soon for updates.
+        </p>
+        <button
+          onClick={() => router.push("/contact-form")}
+          className="py-3 md:py-6 flex items-center gap-1 text-blue-600"
+        >
+          Get Started
+          <FaArrowUpRightFromSquare size={13} />
+        </button>
       </div>
-      <div className="w-1/2">
-        {/* <img src={"/images/login-banner.jpg"} className="w-full h-[100vh]" /> */}
-      </div>
-    </div>
+    </>
   );
 }

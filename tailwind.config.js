@@ -23,6 +23,10 @@ module.exports = {
         "secondary-hover": "#4146ad",
         "primary-light": "#fffbd7",
       },
+      backgroundImage: {
+        // default: "#F0F0F0", // Replace with your desired color
+        primary: "linear-gradient(to bottom , #000000, #000000, #2b0089 )",
+      },
     },
   },
   plugins: [],
