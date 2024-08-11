@@ -85,9 +85,9 @@ export default function FullWidthForm() {
   ];
 
   return (
-    <div className="bg-primary">
+    <div className="bg-primary ">
       <Header />
-      <div className="pt-10 pb-5 px-5">
+      <div className="pt-10 pb-5 px-5 min-h-screen">
         <div className="mb-5 pl-6">
           <span className="text-3xl md:text-4xl text-white uppercase font-bold">
             Information form
@@ -204,7 +204,7 @@ export default function FullWidthForm() {
             </div>
           </form>
 
-          <div className="w-full lg:w-2/5 flex justify-center items-center">
+          <div className="hidden lg:flex w-full lg:w-2/5 justify-center items-center">
             <img
               src="images/info-1-removebg.png"
               className="h-[70%] w-full object-cover rounded-lg"

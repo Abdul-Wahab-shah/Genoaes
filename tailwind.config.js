@@ -25,7 +25,7 @@ module.exports = {
       },
       backgroundImage: {
         // default: "#F0F0F0", // Replace with your desired color
-        primary: "linear-gradient(to bottom , #000000, #000000, #2b0089 )",
+        primary: "linear-gradient(to bottom , #000000 , #000000,#2b0089   )",
       },
     },
   },

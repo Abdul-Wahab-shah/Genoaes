@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Header />
 
-      <div className="min-h-[553px] bg-primary flex flex-col justify-center items-center p-4 text-center">
+      <div className="  min-h-screen bg-primary flex flex-col justify-center items-center p-4 text-center">
         <h1 className="text-4xl md:text-7xl font-bold text-white">
           Coming Soon!
         </h1>

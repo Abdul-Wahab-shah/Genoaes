@@ -21,8 +21,8 @@ export default function Header() {
         />
       </div>
 
-      <nav className="flex-1">
-        <ul className="flex justify-end space-x-4 md:space-x-8 mr-4 md:mr-10">
+      <nav className="flex-1 ">
+        <ul className="lg:flex hidden justify-end space-x-4 md:space-x-8 mr-4 md:mr-10">
           <li>
             <Link
               href="/"
