@@ -109,7 +109,7 @@ export default function FullWidthForm() {
                       id={id}
                       value={formData[id as keyof typeof formData]}
                       onChange={handleChange}
-                      className="p-2 border border-[#313131] text-white bg-transparent outline-none rounded-md"
+                      className="p-2 border border-[#757575] text-white bg-transparent outline-none rounded-md"
                       required={required}
                     />
                   </div>
@@ -128,7 +128,7 @@ export default function FullWidthForm() {
                       id={id}
                       value={formData[id as keyof typeof formData]}
                       onChange={handleChange}
-                      className="p-2 border border-[#313131] text-white bg-transparent outline-none rounded-md"
+                      className="p-2 border border-[#757575] text-white bg-transparent outline-none rounded-md"
                       required={required}
                     />
                   </div>
@@ -147,7 +147,7 @@ export default function FullWidthForm() {
                       id={id}
                       value={formData[id as keyof typeof formData]}
                       onChange={handleChange}
-                      className="p-2 border border-[#313131] text-white bg-transparent outline-none rounded-md"
+                      className="p-2 border border-[#757575] text-white bg-transparent outline-none rounded-md"
                       required={required}
                     />
                   </div>
@@ -166,7 +166,7 @@ export default function FullWidthForm() {
                       id={id}
                       value={formData[id as keyof typeof formData]}
                       onChange={handleChange}
-                      className="p-2 border border-[#313131] text-white bg-transparent outline-none rounded-md"
+                      className="p-2 border border-[#757575] text-white bg-transparent outline-none rounded-md"
                       required={required}
                     />
                   </div>
@@ -182,7 +182,7 @@ export default function FullWidthForm() {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Type your message here..."
-                  className="p-2 border border-[#313131] text-white bg-transparent outline-none rounded-md h-32"
+                  className="p-2 border border-[#757575] text-white bg-transparent outline-none rounded-md h-32"
                 ></textarea>
               </div>
 
@@ -196,7 +196,7 @@ export default function FullWidthForm() {
                 </button>
                 <button
                   type="submit"
-                  className="text-white border bg-transparent px-4 py-2 rounded border-[#313131]"
+                  className="text-white border bg-transparent px-4 py-2 rounded border-[#757575]"
                 >
                   Submit
                 </button>

@@ -1,5 +1,6 @@
 // @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -24,8 +25,8 @@ module.exports = {
         "primary-light": "#fffbd7",
       },
       backgroundImage: {
-        // default: "#F0F0F0", // Replace with your desired color
-        primary: "linear-gradient(to bottom , #000000 , #000000,#2b0089   )",
+        primary: "linear-gradient(to top , #000000,#9178f1, #354191)",
+        header: "linear-gradient(to top left ,#000000,#1327d8)",
       },
     },
   },
