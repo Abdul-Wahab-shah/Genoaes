@@ -26,7 +26,7 @@ module.exports = {
       },
       backgroundImage: {
         primary: "linear-gradient(to top , #000000,#9178f1, #354191)",
-        header: "linear-gradient(to top left ,#000000,#1327d8)",
+        header: "linear-gradient(to top left ,#000000,#7d60ff)",
       },
     },
   },
