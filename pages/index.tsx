@@ -124,7 +124,7 @@ export default function Home() {
       <div
         className=" hero  min-h-screen  flex items-center justify-center relative"
         style={{
-          backgroundImage: "url('/images/bg-hero4.jpg')",
+          backgroundImage: "url('/images/bg-hero6.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -134,7 +134,7 @@ export default function Home() {
 
         {/* Content */}
         <div className="text-center z-10">
-          <div className="max-w-lg px-5">
+          <div className="max-w-2xl px-5">
             <span
               ref={el}
               className="text-3xl md:text-5xl animation font-bold text-white"
@@ -214,7 +214,7 @@ export default function Home() {
                 expandedService === null
                   ? "border-red border p-3 rounded-2xl w-full md:w-[300px] h-auto md:h-[300px] flex flex-col cursor-pointer"
                   : expandedService === index
-                  ? "fixed border-[1px] border-red rounded-md w-[90%] m-auto h-[90%] my  inset-0 z-50 bg-black bg-opacity-90 flex flex-col items-center justify-center p-8"
+                  ? "fixed  w-full m-auto h-full my  inset-0 z-50 bg-black bg-opacity-90 flex flex-col items-center justify-center p-8"
                   : "hidden"
               }`}
               onClick={() =>

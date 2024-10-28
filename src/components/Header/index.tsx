@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Header() {
   const router = useRouter();
   const [activeNavItem, setActiveNavItem] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleActiveNavBar = (path: string) => {
     setActiveNavItem(path);
@@ -28,8 +29,25 @@ export default function Header() {
     });
   };
 
+  // Track scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="flex items-center justify-center  md:border-2 border-red  rounded-3xl w-full max-w-[50rem] mx-auto h-[4rem]  px-4 ">
+    <div
+      className={`sticky top-0 z-50 flex mx-auto items-center justify-center rounded-3xl w-full max-w-[50rem] h-[4.5rem] px-4 bg-black ${
+        isScrolled ? "border-red" : "border-red-500"
+      } md:border-2`}
+    >
       <div className="flex items-center w-full justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
@@ -43,7 +61,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex justify-center  space-x-4 md:mr-6 lg:space-x-10">
+        <ul className="hidden md:flex justify-center space-x-4 md:mr-6 lg:space-x-10">
           {[
             "home",
             "about",
@@ -54,10 +72,10 @@ export default function Header() {
           ].map((item) => (
             <li key={item}>
               <span
-                className={`text-sm lg:text-lg font-medium cursor-pointer ${
+                className={`text-sm lg:text-lg  cursor-pointer ${
                   activeNavItem === item
-                    ? "text-red"
-                    : "text-white hover:text-red"
+                    ? "text-red font-thin"
+                    : "text-white hover:text-red font-light "
                 }`}
                 onClick={() => {
                   item === "/" ? router.push("/") : scrollToSection(item);
@@ -73,7 +91,7 @@ export default function Header() {
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white  focus:outline-none"
+            className="text-white focus:outline-none"
           >
             {isMenuOpen ? (
               <FaTimes className="h-6 w-6 focus:outline-none bg-black" />
@@ -86,8 +104,12 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-16 left-0 right-0 z-50 w-full h-full bg-red text-white flex flex-col items-start  pl-8 pt-5 md:hidden">
-          <ul className="flex flex-col space-y-8 ">
+        <div
+          className={`absolute top-16 right-0 z-50 w-full max-w-xs h-screen bg-black text-white flex flex-col items-start pl-8 py-5 md:hidden transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <ul className="flex flex-col space-y-8">
             {[
               "home",
               "about",
@@ -100,8 +122,8 @@ export default function Header() {
                 <span
                   className={`text-lg font-medium cursor-pointer ${
                     activeNavItem === item
-                      ? " text-black  text-4xl"
-                      : "text-white text-4xl hover:text-black"
+                      ? "text-red text-4xl font-semibold"
+                      : "text-white text-4xl hover:text-red font-semibold"
                   }`}
                   onClick={() => {
                     item === "/" ? router.push("/") : scrollToSection(item);
