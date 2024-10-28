@@ -126,7 +126,7 @@ export default function Home() {
         style={{
           backgroundImage: "url('/images/bg-hero6.jpg')",
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "left center",
         }}
       >
         {/* Overlay with reduced opacity */}
@@ -146,7 +146,7 @@ export default function Home() {
               scalable, and high-performance results that keep you
               ahead of the curve.
             </p>
-            <button className="p-3 rounded-md text-white font-medium bg-red">
+            <button className="p-3 rounded-md text-white font-medium bg-red hover:bg-white hover:text-black">
               Get Started
             </button>
           </div>
@@ -324,7 +324,7 @@ export default function Home() {
         className="flex flex-col md:flex-row min-h-screen mb-20"
       >
         {/* Left side - Contact Information */}
-        <div className="md:w-1/2 bg-[url('/images/contact1.jpg')] relative bg-fixed bg-cover min-h-screen text-white p-8  flex flex-col justify-center">
+        <div className="md:w-1/2 bg-[url('/images/contact1.jpg')] relative bg-fixed bg-cover bg-left-top min-h-screen text-white p-8  flex flex-col justify-center">
           {/* Black Overlay */}
           <div className="absolute inset-0 bg-black bg-opacity-90"></div>
 
