@@ -1,7 +1,7 @@
 "use client";
 import Header from "../src/components/Header";
 import Footer from "../src/components/Footer";
-import Portfolio from "../src/Sections/portfolio";
+import Portfolio from "../src/components/portfolio";
 import React, { useState, useEffect, useRef } from "react";
 // import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -13,6 +13,7 @@ import { MapPin, Phone, Mail } from "lucide-react";
 import { serviceData } from "../serviceData";
 import { testimonials } from "../testimonials";
 import ScrollToTopButton from "../src/components/Buttons/scrollToTop";
+import Team from "../src/components/team";
 
 export default function Home() {
   // testimonials
@@ -122,6 +123,7 @@ export default function Home() {
       {/* Hero section */}
 
       <div
+        id="home"
         className=" hero  min-h-screen  flex items-center justify-center relative"
         style={{
           backgroundImage: "url('/images/bg-hero6.jpg')",
@@ -315,6 +317,18 @@ export default function Home() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* team */}
+
+      <div
+        id="team"
+        className="h-[40%]  justify-center items-center w-full bg-black md:py-20 py-10"
+      >
+        <span className="text-white justify-center font-bold text-4xl md:text-5xl items-center flex pb-10 ">
+          Team
+        </span>
+        <Team />
       </div>
 
       {/* contact form */}

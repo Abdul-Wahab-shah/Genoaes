@@ -44,7 +44,7 @@ export default function Header() {
 
   return (
     <div
-      className={`sticky top-0 z-50 flex mx-auto items-center justify-center rounded-3xl w-full max-w-[50rem] h-[4.5rem] px-4 bg-black ${
+      className={`sticky top-0 z-50 flex mx-auto items-center justify-center rounded-3xl w-full max-w-[55rem] h-[4.5rem] px-4 bg-black ${
         isScrolled ? "border-white" : "border-red-500"
       } md:border-2`}
     >
@@ -68,6 +68,7 @@ export default function Header() {
             "projects",
             "services",
             "testimonial",
+            "team",
             "contact",
           ].map((item) => (
             <li key={item} className="relative group">
@@ -118,6 +119,7 @@ export default function Header() {
               "projects",
               "services",
               "testimonial",
+              "team",
               "contact",
             ].map((item) => (
               <li key={item}>

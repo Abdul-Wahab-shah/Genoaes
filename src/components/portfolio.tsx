@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Card from "../components/Cards/portfolioCard";
+import Card from "./Cards/portfolioCard";
 
 const CarouselComponent = () => {
   useEffect(() => {
