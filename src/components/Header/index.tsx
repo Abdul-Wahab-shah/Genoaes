@@ -1,8 +1,9 @@
 "use client";
+
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Import icons
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Header() {
   const router = useRouter();
@@ -23,25 +24,70 @@ export default function Header() {
         });
       }
       handleActiveNavBar(sectionId);
-      setIsMenuOpen(false); // Close menu after selection
+      setIsMenuOpen(false);
     });
   };
 
   return (
-    <div className="flex items-center bg-black justify-between h-[80px] px-2 md:px-5">
-      <div className="flex-shrink-0">
-        <Link href={"/"}>
-          <img
-            src="/images/logo-whitebg.png"
-            alt="Logo"
-            className="h-24 w-auto"
-          />
-        </Link>
+    <div className="flex items-center justify-center  md:border-2 border-red  rounded-3xl w-full max-w-[50rem] mx-auto h-[4rem]  px-4 ">
+      <div className="flex items-center w-full justify-between">
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          <Link href={"/"}>
+            <img
+              src="/images/logo-whitebg.png"
+              alt="Logo"
+              className="h-16 sm:h-24 mr-4"
+            />
+          </Link>
+        </div>
+
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex justify-center  space-x-4 md:mr-6 lg:space-x-10">
+          {[
+            "home",
+            "about",
+            "projects",
+            "services",
+            "testimonial",
+            "contact",
+          ].map((item) => (
+            <li key={item}>
+              <span
+                className={`text-sm lg:text-lg font-medium cursor-pointer ${
+                  activeNavItem === item
+                    ? "text-red"
+                    : "text-white hover:text-red"
+                }`}
+                onClick={() => {
+                  item === "/" ? router.push("/") : scrollToSection(item);
+                }}
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        {/* Mobile Hamburger Menu */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white  focus:outline-none"
+          >
+            {isMenuOpen ? (
+              <FaTimes className="h-6 w-6 focus:outline-none bg-black" />
+            ) : (
+              <FaBars className="h-6 w-6 focus:outline-none bg-black" />
+            )}
+          </button>
+        </div>
       </div>
 
-      <nav className="flex-1 bg-black relative  ">
-        <div className="hidden lg:flex justify-end space-x-4 md:space-x-8 mr-4 md:mr-10">
-          <ul className="flex space-x-4">
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="absolute top-16 left-0 right-0 z-50 w-full h-full bg-red text-white flex flex-col items-start  pl-8 pt-5 md:hidden">
+          <ul className="flex flex-col space-y-8 ">
             {[
               "home",
               "about",
@@ -52,10 +98,10 @@ export default function Header() {
             ].map((item) => (
               <li key={item}>
                 <span
-                  className={`text-sm md:text-lg font-medium cursor-pointer ${
+                  className={`text-lg font-medium cursor-pointer ${
                     activeNavItem === item
-                      ? " text-red"
-                      : "text-white  hover:text-red"
+                      ? " text-black  text-4xl"
+                      : "text-white text-4xl hover:text-black"
                   }`}
                   onClick={() => {
                     item === "/" ? router.push("/") : scrollToSection(item);
@@ -67,52 +113,7 @@ export default function Header() {
             ))}
           </ul>
         </div>
-
-        {/* Hamburger Menu for Mobile */}
-        <div className="lg:hidden  ml-[230px] ">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white focus:outline-none"
-          >
-            {isMenuOpen ? (
-              <FaTimes className="h-6 w-6 bg-black " />
-            ) : (
-              <FaBars className="h-6 w-6  " />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="absolute top-20 left-[30px] right-0  w-[250px] bg-red  text-white flex flex-col items-left p-5">
-            <ul className="flex flex-col space-y-2 p-4">
-              {[
-                "home",
-                "about",
-                "projects",
-                "services",
-                "testimonial",
-                "contact",
-              ].map((item) => (
-                <li key={item}>
-                  <span
-                    className={`text-lg font-medium cursor-pointer ${
-                      activeNavItem === item
-                        ? "underline text-black hover:text-black"
-                        : "text-white hover:text-black"
-                    }`}
-                    onClick={() => {
-                      item === "/" ? router.push("/") : scrollToSection(item);
-                    }}
-                  >
-                    {item.charAt(0).toUpperCase() + item.slice(1)}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </nav>
+      )}
     </div>
   );
 }

@@ -15,18 +15,18 @@
 
 /* services */
 /* <style jsx>{` */
-.group:hover .child:not(:hover) {
+/* .group:hover .child:not(:hover) {
   filter: blur(5px);
 }
 .child:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
-}
+} */
 /* `}</style> */
 
 /* about image  */
 
-@keyframes moveDot {
+/* @keyframes moveDot {
   0%,
   100% {
     top: 10%;
@@ -47,4 +47,9 @@
 }
 .animate-dot {
   animation: moveDot 6s linear infinite;
+} */
+
+body {
+  @apply bg-black font-serif;
+  /* Using Tailwind CSS's @apply directive */
 }
