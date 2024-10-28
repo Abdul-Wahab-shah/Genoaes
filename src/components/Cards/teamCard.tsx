@@ -22,7 +22,7 @@ function TeamCard({ name, imageUrl, jobTitle, description, socialLinks }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedinIn />
+              <FaLinkedinIn className="text-red" />
             </a>
           )}
           {socialLinks?.twitter && (
@@ -31,7 +31,7 @@ function TeamCard({ name, imageUrl, jobTitle, description, socialLinks }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaTwitter />
+              <FaTwitter className="text-red" />
             </a>
           )}
           {socialLinks?.facebook && (
@@ -40,7 +40,7 @@ function TeamCard({ name, imageUrl, jobTitle, description, socialLinks }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebook />
+              <FaFacebook className="text-red " />
             </a>
           )}
         </div>
