@@ -51,9 +51,9 @@ export default function Home() {
         strings: [
           "Web Development",
           "App Development",
-          "Blockchain",
+          "Blockchain Development",
           "SaaS Development",
-          "DevOps",
+          "DevOps Development",
           "Cloud Security",
         ],
         typeSpeed: 80,
@@ -212,7 +212,7 @@ export default function Home() {
               key={index}
               className={`transition-all duration-300 ease-in-out ${
                 expandedService === null
-                  ? "border-red border p-3 rounded-2xl w-full md:w-[300px] h-auto md:h-[300px] flex flex-col cursor-pointer"
+                  ? " shadow-lg   shadow-white p-3 rounded-2xl w-full md:w-[300px] h-auto md:h-[300px] flex flex-col cursor-pointer"
                   : expandedService === index
                   ? "fixed  w-full m-auto h-full my  inset-0 z-50 bg-black bg-opacity-90 flex flex-col items-center justify-center p-8"
                   : "hidden"

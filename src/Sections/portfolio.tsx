@@ -44,7 +44,7 @@ const CarouselComponent = () => {
   const carouselItemStyles = {
     width: "250px",
     height: "350px",
-    boxShadow: "0 0 40px #ff0000, 0 0 40px #ff0000, 0 0 40px #ff0000",
+    boxShadow: "0 0 40px #ffff, 0 0 40px #ffff, 0 0 40px #ffff",
     animation: "animate 4s infinite alternate",
     borderRadius: "15px",
   };
@@ -92,7 +92,7 @@ const CarouselComponent = () => {
       <style jsx>{`
         @keyframes animate {
           to {
-            box-shadow: 0 0 50px #ff0000, 0 0 50px #ff0000, 0 0 50px #ff0000;
+            box-shadow: 0 0 50px #ffff, 0 0 50px #ffff, 0 0 50px #ffff;
           }
         }
       `}</style>

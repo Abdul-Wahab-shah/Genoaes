@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <div
       className={`sticky top-0 z-50 flex mx-auto items-center justify-center rounded-3xl w-full max-w-[50rem] h-[4.5rem] px-4 bg-black ${
-        isScrolled ? "border-red" : "border-red-500"
+        isScrolled ? "border-white" : "border-red-500"
       } md:border-2`}
     >
       <div className="flex items-center w-full justify-between">
@@ -61,7 +61,7 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <ul className="hidden md:flex justify-center space-x-4 md:mr-6 lg:space-x-10">
+        <ul className="hidden md:flex justify-center space-x-4 md:mr-6 lg:space-x-10 relative">
           {[
             "home",
             "about",
@@ -70,12 +70,12 @@ export default function Header() {
             "testimonial",
             "contact",
           ].map((item) => (
-            <li key={item}>
+            <li key={item} className="relative group">
               <span
-                className={`text-sm lg:text-lg  cursor-pointer ${
+                className={`text-sm lg:text-lg cursor-pointer ${
                   activeNavItem === item
-                    ? "text-red font-thin"
-                    : "text-white hover:text-red font-light "
+                    ? "text-red font-medium"
+                    : "text-white group-hover:text-white font-medium"
                 }`}
                 onClick={() => {
                   item === "/" ? router.push("/") : scrollToSection(item);
@@ -83,6 +83,8 @@ export default function Header() {
               >
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </span>
+              {/* Full-width underline */}
+              <span className="absolute  left-0 right-0 -bottom-2 h-0.5 bg-white transition-all duration-300 transform scale-x-0 group-hover:scale-x-100"></span>
             </li>
           ))}
         </ul>
