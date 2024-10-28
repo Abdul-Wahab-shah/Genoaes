@@ -347,7 +347,7 @@ export default function Home() {
             </div>
             <div className="flex items-center">
               <Mail className="mr-4 text-red" />
-              <p>octalabs@gmail.com</p>
+              <p>wahab@octallabs.io</p>
             </div>
           </div>
         </div>
