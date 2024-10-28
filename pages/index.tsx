@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { X } from "lucide-react";
 import Typed from "typed.js";
-import { FaQuoteLeft } from "react-icons/fa";
+import { FaQuoteLeft, FaWhatsapp } from "react-icons/fa";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { serviceData } from "../serviceData";
 import { testimonials } from "../testimonials";
@@ -341,9 +341,11 @@ export default function Home() {
             </div>
             <div className="flex items-center">
               <Phone className="mr-4 text-red" />
-              <p>
-                +1 (415) 799-7440 <br /> +92 (321) 4930750{" "}
-              </p>
+              <p>+1 (415) 799-7440 +92 (321) 4930750</p>
+            </div>
+            <div className="flex items-center">
+              <FaWhatsapp size={24} className="mr-4 text-red" />
+              <p>+92 (321) 4930750</p>
             </div>
             <div className="flex items-center">
               <Mail className="mr-4 text-red" />
