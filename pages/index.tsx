@@ -355,11 +355,11 @@ export default function Home() {
             </div>
             <div className="flex items-center">
               <Phone className="mr-4 text-red" />
-              <p>+1 (415) 799-7440 +92 (321) 4930750</p>
+              <p> +92 (321) 4930750</p>
             </div>
             <div className="flex items-center">
               <FaWhatsapp size={24} className="mr-4 text-red" />
-              <p>+92 (321) 4930750</p>
+              <p>+1 (415) 799-7440</p>
             </div>
             <div className="flex items-center">
               <Mail className="mr-4 text-red" />
