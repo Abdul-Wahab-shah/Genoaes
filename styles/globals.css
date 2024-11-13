@@ -50,6 +50,6 @@
 } */
 
 body {
-  @apply bg-black font-serif;
+  @apply bg-black;
   /* Using Tailwind CSS's @apply directive */
 }

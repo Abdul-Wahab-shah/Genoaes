@@ -116,6 +116,113 @@ export default function Home() {
     setTimeout(() => setSubmissionMessage(""), 5000);
   };
 
+  // technologies
+  const [activeTab, setActiveTab] = useState("Full Stack");
+
+  const tabs = [
+    "Full Stack",
+    "Front End",
+    "Back End",
+    "Mobile",
+    "Blockchain",
+    "DevOps & ML",
+  ];
+  const technologies = {
+    "Full Stack": [
+      { name: "Java", logo: "/images/TechnologiesIcons/JAVA-1.webp" },
+      { name: "LAMP", logo: "/images/TechnologiesIcons/LAMP.webp" },
+      { name: "LEMP", logo: "/images/TechnologiesIcons/LEMP.webp" },
+      { name: "MEAN", logo: "/images/TechnologiesIcons/MEAN.webp" },
+      { name: "MERN", logo: "/images/TechnologiesIcons/MERN.webp" },
+      { name: "MEVN", logo: "/images/TechnologiesIcons/MEVN.webp" },
+    ],
+    "Front End": [
+      { name: "HTML5", logo: "/images/TechnologiesIcons/logof1.png" },
+      {
+        name: "CSS3",
+        logo: "/images/TechnologiesIcons/logof2.png",
+      },
+      {
+        name: "JavaScript",
+        logo: "/images/TechnologiesIcons/logof3.png",
+      },
+      {
+        name: "Angular JS",
+        logo: "/images/TechnologiesIcons/logof4.png",
+      },
+      { name: "Vue JS", logo: "/images/TechnologiesIcons/logof5.png" },
+      { name: "React", logo: "/images/TechnologiesIcons/logof6.png" },
+    ],
+    "Back End": [
+      {
+        name: "NODE JS",
+        logo: "/images/TechnologiesIcons/NODE-JS.webp",
+      },
+      { name: "PYTHON", logo: "/images/TechnologiesIcons/PYTHON.webp" },
+      { name: "JAVA", logo: "/images/TechnologiesIcons/JAVAs.webp" },
+      { name: "PHP", logo: "/images/TechnologiesIcons/PHPs.webp" },
+      {
+        name: "LARAVEL",
+        logo: "/images/TechnologiesIcons/LARAVEL.webp",
+      },
+      {
+        name: "MONGODB",
+        logo: "/images/TechnologiesIcons/MONGODB.webp",
+      },
+    ],
+    Mobile: [
+      {
+        name: "IOS",
+        logo: "/images/TechnologiesIcons/IOS.webp",
+      },
+      {
+        name: "ANDRIODS",
+        logo: "/images/TechnologiesIcons/ANDROIDs.webp",
+      },
+      {
+        name: "FLUTTER",
+        logo: "/images/TechnologiesIcons/FLUTTERss.webp",
+      },
+      { name: "SWIFT", logo: "/images/TechnologiesIcons/SWIFT.webp" },
+      { name: "KOTLIN", logo: "/images/TechnologiesIcons/KOTLIN.webp" },
+      {
+        name: "REACT-NATIVE",
+        logo: "/images/TechnologiesIcons/REACT-NATIVE.webp",
+      },
+    ],
+    Blockchain: [
+      { name: "TEZOS", logo: "/images/TechnologiesIcons/TEZOS.webp" },
+      {
+        name: "CARDANO",
+        logo: "/images/TechnologiesIcons/CARDANO.webp",
+      },
+      {
+        name: "POLKADOT",
+        logo: "/images/TechnologiesIcons/POLKADOT.webp",
+      },
+      {
+        name: "ETHEREUM",
+        logo: "/images/TechnologiesIcons/ETHEREUM.webp",
+      },
+    ],
+    "DevOps & ML": [
+      { name: "AWS", logo: "/images/TechnologiesIcons/AWS.webp" },
+      {
+        name: "AZURE",
+        logo: "/images/TechnologiesIcons/AZURE.webp",
+      },
+      {
+        name: "DOCKER",
+        logo: "/images/TechnologiesIcons/DOCKER.webp",
+      },
+      { name: "GCP", logo: "/images/TechnologiesIcons/GCP.webp" },
+      {
+        name: "KUBERNETTES",
+        logo: "/images/TechnologiesIcons/KUBERNETTES.webp",
+      },
+    ],
+  };
+
   return (
     <div className="scroll-container">
       <Header />
@@ -124,31 +231,46 @@ export default function Home() {
 
       <div
         id="home"
-        className=" hero  min-h-screen  flex items-center justify-center relative"
-        style={{
-          backgroundImage: "url('/images/bg-hero6.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "left center",
-        }}
+        className=" min-h-screen m-0 flex items-center justify-center md:-mt-[7rem]  -mt-[11rem] text-center  relative "
       >
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+          style={{
+            zIndex: -1,
+          }}
+        >
+          <source src="/heroSectionBackgroundVideo.mp4" type="video/mp4" />
+          {/* Fallback for browsers that don't support the video */}
+          Your browser does not support the video tag.
+        </video>
         {/* Overlay with reduced opacity */}
         <div className="absolute inset-0 bg-black opacity-80"></div>
 
         {/* Content */}
-        <div className="text-center z-10">
-          <div className="max-w-2xl px-5">
+        <div
+          className="relative z-10 flex items-center justify-center"
+          style={{
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="max-w-3xl px-5 ">
             <span
               ref={el}
-              className="text-3xl md:text-5xl animation font-bold text-white"
+              className="text-3xl md:text-6xl animation font-bold text-white"
             ></span>
-            <p className="py-5 text-white">
+            <p className="py-5 text-[18px]  text-white">
               Unlock the future of your business with cutting-edge digital
               solutions,custom-crafted to fuel your growth. From rapid
               development to flawless integration, our expertise ensures secure,
               scalable, and high-performance results that keep you
               ahead of the curve.
             </p>
-            <button className="p-3 rounded-md text-white font-medium bg-red hover:bg-white hover:text-black">
+            <button className="px-4 py-3 text-[18px] rounded-md text-white font-medium bg-red hover:bg-white hover:text-black">
               Get Started
             </button>
           </div>
@@ -164,7 +286,7 @@ export default function Home() {
           <span className="text-4xl md:text-5xl font-bold text-white font-serif  ">
             About Us
           </span>
-          <p className="text-lg text-gray-700 md:my-4 text-white mb-10  mt-3 md:mt-0  leading-9 word-spacing  tracking-wider font-serif ">
+          <p className="text-lg text-gray-700 md:my-4 text-white mb-10  mt-3 md:mt-0  leading-9 word-spacing  tracking-wider ">
             <b>Octal Labs</b> , founded in 2020, is a dedicated team of
             certified experts delivering tailored IT solutions. We specialize in
             web and mobile app development, DevOps, Blockchain, Cloud Security,
@@ -319,18 +441,44 @@ export default function Home() {
         </div>
       </div>
 
-      {/* team */}
+      {/* technologies */}
 
-      <div
-        id="team"
-        className="h-[40%]  justify-center items-center w-full bg-black md:py-20 py-10"
-      >
-        <span className="text-white justify-center font-bold text-4xl md:text-5xl items-center flex pb-10 ">
-          Team
-        </span>
-        <Team />
+      <div className="text-center justify-center p-6 max-w-6xl mx-auto mb-10 md:mb-20">
+        <h2 className="md:text-5xl text-4xl font-bold mb-4 text-white">
+          Technologies
+        </h2>
+        <p className="mt-2  mb-8 text-white">
+          Our comprehensive range of expertise empowers businesses to seize new
+          opportunities and achieve remarkable results.
+        </p>
+
+        <div className="flex flex-wrap bg-red  rounded-full justify-center gap-2 mb-8">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              className={`px-6 py-6 -my-1  font-semibold rounded-full  ${
+                activeTab === tab ? "bg-white  text-black" : " text-white"
+              }`}
+              onClick={() => setActiveTab(tab)}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-2  sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 ">
+          {technologies[activeTab]?.map((tech) => (
+            <div key={tech.name} className="text-center ">
+              <img
+                src={tech.logo}
+                alt={tech.name}
+                className="h-[100px] w-[100px] mx-auto mb-2"
+              />
+              <p className="text-sm text-white">{tech.name}</p>
+            </div>
+          ))}
+        </div>
       </div>
-
       {/* contact form */}
 
       <div
@@ -438,7 +586,9 @@ export default function Home() {
       </div>
 
       {/* Footer */}
-      <Footer />
+      <div>
+        <Footer />
+      </div>
 
       {/* Top scroll */}
       <ScrollToTopButton />
