@@ -9,20 +9,15 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+        sans: ["Onest", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        red: "#ff0000",
-        black: "#000000",
+        green: "#43AA13",
         white: "#ffffff",
-        slate: "#313D48",
-        danger: "#EA3E3E",
-        gray: "#748092",
-        pink: "#F4B6B5",
-        default: "#DFE5EF",
-        "red-hover": "#D0BEF2",
-        "black-hover": "#4146ad",
-        "red-light": "#fffbd7",
+        black: "#202020",
+        orange: "#E4602F",
+        darkGreen: "#193E2C",
+        border: "hsl(var(--border))",
       },
     },
   },
