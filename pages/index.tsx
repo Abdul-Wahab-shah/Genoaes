@@ -96,7 +96,7 @@ export default function HeroSection() {
         <MainNav />
 
         {/* Hero Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-80px)] text-center px-4 md:px-8">
+        <div className="relative z-10 flex flex-col items-center h-[600px]  pb-5 justify-end min-h-[calc(100vh-80px)] text-center px-4 md:px-8">
           <h1 className="text-4xl md:text-5xl lg:text-5xl font-medium text-white max-w-4xl leading-tight mb-6">
             LAUNCH YOUR STARTUP
             <br />
@@ -119,9 +119,8 @@ export default function HeroSection() {
       </div>
 
       {/* Stats Section */}
-      <section className="relative z-20 px-4 lg:mx-20 -mt-16 bg-white shadow-lg">
+      <div className="relative z-20 px-4 lg:mx-20 -mt-16 bg-white shadow-lg">
         <div className="px-4 py-12 ">
-          {/* Stats Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 gap-8 mb-12 text-center">
             <div>
               <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-2">
@@ -151,7 +150,7 @@ export default function HeroSection() {
 
           {/* Partners Section */}
           <div className="mb-12">
-            <p className="text-green mb-6">
+            <p className="text-green mb-5">
               Joined by experts with experience in:
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-6 md:grid-cols-3 lg:ml-[350px] lg:grid-cols-6 gap-8 items-center justify-items-center">
@@ -176,14 +175,15 @@ export default function HeroSection() {
           </div>
 
           {/* Info Section */}
-          <div className="mb-12">
-            <h3 className="text-lg text-green mb-6">
+          <div className="mb-12 w-full">
+            <h3 className="text-lg text-green mb-6 ">
               What is Genoa Entrepreneurship School?
             </h3>
+            <div className=" h-[1px] -mt-5 mb-10 bg-gradient-to-l from-[#dfdede] via-[#c9c8c8] via-30% to-[#193E2C]"></div>
             <div className="flex flex-col lg:flex-row sm:gap-5 gap-8 mb-12">
               <h2 className="text-2xl  md:text-4xl font-light lg:w-2/5">
-                BRIDGING THE <br className="hidden" /> ACADEMIA AND <br />{" "}
-                STARTUP WORLDS
+                BRIDGING THE <br className="" /> ACADEMIA AND{" "}
+                <br className="" /> STARTUP WORLDS
               </h2>
               <div className="lg:w-3/5">
                 <p className="text-gray-600 lg:text-left">
@@ -240,9 +240,8 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* CTA Button */}
           <div className="text-right">
-            <button className="inline-flex items-center border border-black px-4 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-100 transition-colors ">
+            <button className="inline-flex items-center border border-black px-4 py-2 text-gray-700 hover:text-white hover:border-green hover:bg-green transition-colors ">
               READ MORE ABOUT US
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
@@ -251,29 +250,31 @@ export default function HeroSection() {
 
         {/* meet our professor */}
 
-        <div className="max-w-7xl mx-auto py-12 space-y-8">
-          {/* Professor Video Section */}
-          <div className="md:flex gap-8 items-start bg-[#fdfbf7] w-full p-4 ">
+        <div className="max-w-7xl mx-auto  ">
+          <div className="md:flex gap-8 items-start bg-[#FAF5E2] w-full  ">
             <div className=" md:hidden lg:hidden md:w-[60%] ">
               <video
-                // poster="/professor.png"
                 className="w-full h-full object-cover"
-                src="/background-video.mp4"
+                src="/professor.png"
                 muted
                 playsInline
               />
             </div>
 
-            <div className="space-y-4 md:w-[40%]">
-              <h2 className="sm:pt-5 text-3xl font-medium md:pb-[150px]">
+            <div className="space-y-4 md:w-[40%] pt-4 pl-4">
+              <h2 className="pt-5 md:pt-0 text-3xl font-medium md:pb-[100px]">
                 Meet your professor
               </h2>
               <blockquote className="border-l-2 border-green space-y-3 pl-4 text-white ">
                 <p className="text-gray-600 leading-relaxed">
                   At Georgetown, we believe in entrepreneurship as a force for
-                  good. Our partnership with Genoa Entrepreneurship School
-                  aligns with our values perfectly, supporting emerging
-                  entrepreneurs worldwide.
+                  good.{" "}
+                  <strong>
+                    {" "}
+                    Our partnership with Genoa Entrepreneurship School aligns
+                    with our values perfectly, supporting emerging entrepreneurs
+                    worldwide.
+                  </strong>
                 </p>
                 <div className="flex items-center gap-2">
                   <img src="/Vector.png" alt="" />
@@ -288,9 +289,8 @@ export default function HeroSection() {
             </div>
             <div className=" overflow-hidden md:w-[60%] ">
               <video
-                // poster="/professor.png"
                 className="w-full h-full object-cover"
-                src="/background-video.mp4"
+                src="/professor.png"
                 muted
                 playsInline
               />
@@ -299,9 +299,8 @@ export default function HeroSection() {
 
           {/* What We Offer Section */}
           <div>
-            <h2 className="text-xl px-4 font-medium text-green mb-6">
-              What do we offer?
-            </h2>
+            <h2 className="text-xl text-green mt-12 mb-5">What do we offer?</h2>
+            <div className=" h-[1px] -mt-5 mb-10 bg-gradient-to-l from-[#dfdede] via-[#c9c8c8] via-30% to-[#193E2C]"></div>
             <div className="grid md:grid-cols-2 gap-8 bg-[#1a472a]  overflow-hidden">
               <Image
                 src="/student.jpeg"
@@ -359,29 +358,27 @@ export default function HeroSection() {
             </div>
           </div>
         </div>
-        {/* benefits section */}
+        {/* Genoa Entrepreneurship section */}
 
-        {/* Main Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-xl text-green-600 font-medium mb-4">
+        <div className="text-center mt-10">
+          <h2 className="text-xl text-left  text-green mb-5">
             Why Genoa Entrepreneurship School?
           </h2>
-          <p className="text-2xl md:text-3xl lg:text-4xl max-w-3xl mx-auto">
-            <span className="text-green-600">Learn and grow</span> with
-            personalized expert guidance in the world's most stimulating cities
-            while studying
+          <div className=" h-[1px] -mt-5 mb-10 bg-gradient-to-l from-[#dfdede] via-[#c9c8c8] via-30% to-[#193E2C]"></div>
+          <p className="text-2xl md:text-3xl lg:text-4xl max-w-3xl mb-10 mx-auto">
+            <span className="text-green">Learn and grow</span> with personalized
+            expert guidance in the world's most stimulating cities while
+            studying
           </p>
         </div>
 
-        {/* Benefits Grid */}
-
-        <div className="grid md:grid-cols-3 gap-8 mb-20 px-4 ">
+        <div className="grid md:grid-cols-3 gap-8 px-4 ">
           {benefits.map((benefit) => (
             <div key={benefit.number} className="space-y-4">
-              <div className="text-green font-bold text-lg">
+              <div className="text-green font-bold text-2xl">
                 {benefit.number}
               </div>
-              <h3 className="text-xl font-medium leading-tight min-h-[4rem]">
+              <h3 className="text-xl leading-tight min-h-[4rem]">
                 {benefit.title}
               </h3>
               <ul className="space-y-2">
@@ -396,10 +393,11 @@ export default function HeroSection() {
         </div>
 
         {/* our network */}
-        <div className="w-full py-16">
-          <h2 className="text-xl px-4 font-medium">Who is in our network?</h2>
+        <div className="w-full  mt-12">
+          <h2 className="text-xl text-green">Who is in our network?</h2>
+          <div className=" h-[1px]  mb-10 bg-gradient-to-l from-[#dfdede] via-[#c9c8c8] via-30% to-[#193E2C]"></div>
+
           <div className="flex relative h-screen">
-            {/* Left section with image (70%) */}
             <div className="w-[70%] h-full relative overflow-hidden">
               <Image
                 src="/our network.png"
@@ -409,18 +407,13 @@ export default function HeroSection() {
               />
             </div>
 
-            {/* Right section with black background (30%) */}
             <div className="w-[30%] h-full   bg-black" />
 
-            {/* Black overlay that extends from right to left */}
             <div className="absolute inset-0 bg-gradient-to-l from-black via-black/95 to-black/30" />
 
-            {/* Content overlay */}
             <div className="absolute inset-0 flex">
-              {/* Empty div for left space (70%) */}
               <div className="w-[70%]" />
 
-              {/* Content container aligned to right (30%) */}
               <div className="w-[30%] px-8 py-12 flex  flex-col justify-between">
                 <div className="space-y-8 ">
                   <div>
@@ -441,7 +434,7 @@ export default function HeroSection() {
                   </p>
                   <button className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 transition-colors border border-white/20">
                     DISCOVER THE NETWORK
-                    <ArrowRight className="w-5 h-5" />
+                    <ArrowRight className="w-5 h-5 " />
                   </button>
                 </div>
 
@@ -490,11 +483,50 @@ export default function HeroSection() {
           </div>
         </div>
 
+        {/* Student Life Section */}
+        <div className="mt-12 w-full">
+          <h2 className="text-xl text-left text-green ">
+            How is life at Genoa Entrepreneurship School?
+          </h2>
+          <div className=" h-[1px] mb-10 bg-gradient-to-l from-[#dfdede] via-[#c9c8c8] via-30% to-[#193E2C]"></div>
+
+          <div className="grid md:grid-cols-2 gap-8 mt-5 bg-[#FAF5E2]">
+            <div className="space-y-4 p-4 flex flex-col justify-between">
+              <div className="space-y-4">
+                <h3 className="text-4xl font-light">
+                  <span className="text-green">
+                    Learn and build with the best
+                  </span>{" "}
+                  every day
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Live, work and grow in student cities like New York,
+                  Washington or San Francisco. You will explore iconic places
+                  like the Google campus, Meta Playground and the Tesla Factory.
+                </p>
+              </div>
+
+              <button className="flex gap-2 uppercase items-center text-black px-6 py-3 transition-colors border border-black self-end">
+                Discover How is Life during the program
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/school student.png"
+                alt="Students collaborating in workshop"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* testimonials section */}
-        <section className="py-12 ">
+        <section className="my-14 ">
           <div className="container">
             <div className="grid grid-cols-3">
-              {/* Title and Arrow Section */}
               <div className="flex flex-col justify-start space-y-4 pl-4">
                 <h2 className="text-4xl font-light uppercase leading-tight">
                   Understand the experience directly from our students
@@ -553,7 +585,6 @@ export default function HeroSection() {
         </section>
         {/* second last section  */}
         <div className="grid md:grid-cols-2">
-          {/* Image Section */}
           <div className="relative aspect-[4/3]">
             <Image
               src="/Rectangle 34529.png"
@@ -562,8 +593,6 @@ export default function HeroSection() {
               className="object-cover"
             />
           </div>
-
-          {/* Content Section */}
           <div className="bg-[#193E2C] p-8 md:p-12 flex flex-col justify-between space-y-6">
             <div className="space-y-4">
               <h2 className="text-green text-xl">
@@ -582,70 +611,105 @@ export default function HeroSection() {
           </div>
         </div>
         {/* footer */}
-        <footer className="border-t  py-12">
-          <div className=" px-4">
-            <div className="grid grid-cols-1 md:grid-cols-7 gap-8">
-              {/* Left Column - Logo and Address */}
-              <div className="space-y-4">
-                <Link href="/" className="text-[#4CAF50] font-bold text-xl">
-                  GENOAES
-                </Link>
-                <div className="text-sm text-gray-600 space-y-1">
-                  <p>Schedaya Associazione culturale e di promozione sociale</p>
-                  <p>Piazza Santa Maria in Via Lata 15, 16128 Genova, Italy</p>
+        <footer className="border-t py-12">
+          <div className="px-4 flex flex-wrap justify-between">
+            <div className="space-y-4 max-w-xs">
+              <a href="/" className="text-green font-bold text-xl">
+                GENOAES
+              </a>
+              <div className="text-sm space-y-1">
+                <p>Schedaya Associazione culturale e di promozione sociale</p>
+                <p>Piazza Santa Maria in Via Lata 15, 16128 Genova, Italy</p>
+              </div>
+              <div className="space-y-2">
+                <p className="text-sm font-bold">Mail</p>
+                <a
+                  href="mailto:admissions@genoaes.com"
+                  className="text-green hover:underline"
+                >
+                  admissions@genoaes.com
+                </a>
+              </div>
+              <div className="flex gap-4 pt-2">
+                <a
+                  href="#"
+                  className="text-red-600 hover:text-red-800 transition-colors"
+                  aria-label="Instagram"
+                >
+                  <FaInstagramSquare className="w-5 h-5" />
+                </a>
+                <a
+                  href="#"
+                  className="text-blue-600  hover:text-blue-800 transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <FaLinkedinIn className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-start justify-center gap-8">
+              <div>
+                <div className="text-sm font-bold">Naviga</div>
+              </div>
+
+              <div className="flex flex-col items-start gap-3">
+                <div className="flex items-start gap-2">
+                  <img
+                    src="/arrow.png"
+                    alt="arrow"
+                    className="pt-1 hover:text-blue-800"
+                  />
+                  <div className="text-sm hover:text-blue-800">Chi siamo</div>
                 </div>
-                <div className="space-y-2">
-                  <p className="text-sm text-gray-600">Mail</p>
-                  <a
-                    href="mailto:admissions@genoaes.com"
-                    className="text-[#4CAF50] hover:underline"
-                  >
-                    admissions@genoaes.com
-                  </a>
-                </div>
-                <div className="flex gap-4 pt-2">
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-[#4CAF50] transition-colors"
-                    aria-label="Instagram"
-                  >
-                    <FaInstagramSquare className="w-5 h-5" />
-                  </a>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-[#4CAF50] transition-colors"
-                    aria-label="LinkedIn"
-                  >
-                    <FaLinkedinIn className="w-5 h-5" />
-                  </a>
+                <div className="flex items-start gap-2">
+                  <img
+                    src="/arrow.png"
+                    alt="arrow"
+                    className="pt-1 hover:text-blue-800"
+                  />
+                  <div className="text-sm hover:text-blue-800">Carriera</div>
                 </div>
               </div>
 
-              {/* Center Column - Navigation */}
-              <div className="space-y-4 ">
-                <div>Naviga</div>
-              </div>
-              <div className="space-y-4 ">
-                <div>Chi siamo</div>
-                <div>Carriera</div>
-              </div>
-
-              <div className="space-y-4 ">
-                <div>Il Master</div>
-              </div>
-              <div className="space-y-4 ">
-                <div>Il nostro network</div>
-              </div>
-              <div className="space-y-4 ">
-                <div>Perché scegliere noi?</div>
+              <div className="flex items-start gap-2">
+                <img
+                  src="/arrow.png"
+                  alt="arrow"
+                  className="pt-1 hover:text-blue-800"
+                />
+                <div className="text-sm hover:text-blue-800">Il Master</div>
               </div>
 
-              {/* Right Column - Copyright */}
-              <div className="text-right  text-gray-400">2024 ©</div>
+              <div className="flex items-start gap-2">
+                <img
+                  src="/arrow.png"
+                  alt="arrow"
+                  className="pt-1 hover:text-blue-800"
+                />
+                <div className="text-sm hover:text-blue-800">
+                  Il nostro network
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2">
+                <img
+                  src="/arrow.png"
+                  alt="arrow"
+                  className="pt-1 hover:text-blue-800"
+                />
+                <div className="text-sm hover:text-blue-800">
+                  Perché scegliere noi?
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <img src="/2024.png" alt="2024" width={50} />
             </div>
           </div>
         </footer>
-      </section>
+      </div>
     </>
   );
 }
