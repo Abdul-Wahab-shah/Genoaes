@@ -288,11 +288,9 @@ export default function HeroSection() {
               </blockquote>
             </div>
             <div className=" overflow-hidden md:w-[60%] ">
-              <video
+              <img
                 className="w-full h-full object-cover"
                 src="/professor.png"
-                muted
-                playsInline
               />
             </div>
           </div>
